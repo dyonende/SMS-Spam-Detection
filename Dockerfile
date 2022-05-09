@@ -12,6 +12,7 @@ RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 COPY requirements.txt .
+COPY .git/ ./.git
 RUN python -m pip install --upgrade pip &&\
     pip install -r requirements.txt
 
